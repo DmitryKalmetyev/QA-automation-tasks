@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -24,7 +23,7 @@ public class Exercise65 {
         }
     }
 
-    private static List sliceToDigits(int x) {
+    private static List<Integer> sliceToDigits(int x) {
         List <Integer> digits = new ArrayList<Integer>();
         do {
             digits.add(x % 10);
