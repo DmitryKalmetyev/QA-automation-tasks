@@ -4,33 +4,40 @@ import java.io.IOException;
  * Created by dmitry.kalmetyev on 23/06/2014.
  */
 public class Exercise46 {
+    static float x;
+    static float y;
+
 
     public static void main(String[] args) {
-        process(3.4f, 11f);
+        set();
+        process();
+        print();
     }
 
-    private static void process(float x, float y) {
+    private static void set(){
+        x=3.5f;
+        y=5f;
+    }
+
+    private static void process() {
         if (x<0 && y<0){
-            System.out.println(-x);
-            System.out.println(-y);
+            x=Math.abs(x);
+            y=Math.abs(y);
         }
         else if (x>=0 && y>=0){
             if ((x<0.5 || x>2) && (y<0.5 || y>2)){
-                System.out.println(x/10f);
-                System.out.println(y/10f);
+                x=x/10f;
+                y=y/10f;
             }
-            else {
-                System.out.println(x);
-                System.out.println(y);
-            }
-
         }
         else {
-            System.out.println(x+0.5f);
-            System.out.println(y+0.5f);
+            x+=0.5f;
+            y+=0.5f;
         }
-
-
     }
 
+    private static void print(){
+        System.out.println(x);
+        System.out.println(y);
+    }
 }
