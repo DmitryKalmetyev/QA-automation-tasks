@@ -8,12 +8,12 @@ import java.util.List;
 public class Exercise65 {
 
     public static void main(String[] args) {
-        List digits = new ArrayList<Integer>();
+        List <Integer> digits;
         int input = 456;
         digits = sliceToDigits(input);
         int sumOfDigits=0;
-        for (Object digit : digits) {
-            sumOfDigits += (Integer) digit;
+        for (Integer digit : digits) {
+            sumOfDigits += digit;
         }
 
         if (Math.pow(input,2) == Math.pow(sumOfDigits,3)){
